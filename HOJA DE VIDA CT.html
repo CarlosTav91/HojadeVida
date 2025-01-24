@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Carlos Alberto Tavera Sanabria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #d1d1d1, #001f3f);
+            color: #fff;
+        }
+        header {
+            background: #001f3f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        .photo-container {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 225px;
+            height: 225px;
+            background: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2, h3 {
+            color: #001f3f;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        ul li span.stars {
+            margin-left: auto;
+            font-size: 1.5em;
+            color: #aa8800;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .header-description {
+            white-space: pre-line;
+        }
+        .header-description b {
+            font-size: 1.2em;
+        }
+        #map {
+            height: 400px; /* Altura del mapa */
+            margin: 20px auto;
+            max-width: 800px;
+            border: 2px solid #001f3f;
+            border-radius: 5px;
+        }
+    </style>
+    <!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="photo-container">
+            <img src="foto/imagen.png" alt="Foto de Perfil">
+        </div>
+        <b>Carlos Alberto Tavera Sanabria</b>
+        <p class="header-description"><b>Geólogo</b>
+Especialista en Sistemas de Información Geográfica
+Tec. Laboral en Programación
+Piloto de Drones
+Candidato a Máster en Ingeniería Geomática y Geoinformación</p>
+        <p>Email: <a href="mailto:carlosalbertotavera91@gmail.com">carlosalbertotavera91@gmail.com</a> | Teléfono: 3168714348</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Perfil</h2>
+            <p>Especialista en sistemas de información geográfica con fortalezas en cartografía base y temática, manejo y uso de imágenes satelitales, Python, JavaScript, manipulación y manejo de bases de datos, construcción de geoportales y aplicativos web, junto con actividades que involucran POT, EIA y POMCA.</p>
+        </div>
+
+        <!-- Mapa de Bucaramanga debajo del perfil -->
+        <div class="section">
+            <h2>Sitios o Lugares de Interés Geológico en Colombia</h2>
+            <div id="map"></div>
+        </div>
+
+        <div class="section">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Inglés: Intermedio</li>
+                <li>Español: Nativo</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Comunicación</li>
+                <li>Responsabilidad</li>
+                <li>Liderazgo</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Programas</h2>
+            <ul>
+                <li>ArcGIS Pro <span class="stars">★★★★☆</span></li>
+                <li>ArcGIS <span class="stars">★★★★★</span></li>
+                <li>QGIS <span class="stars">★★★★★</span></li>
+                <li>Agisoft MetaShape <span class="stars">★★★★★</span></li>
+                <li>AutoCAD Civil <span class="stars">★★★☆☆</span></li>
+                <li>ENVI <span class="stars">★★★☆☆</span></li>
+                <li>Python <span class="stars">★★★★★</span></li>
+                <li>JavaScript <span class="stars">★★★★★</span></li>
+                <li>Google Earth Engine <span class="stars">★★★★★</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Experiencia Profesional</h2>
+            <ul>
+                <li><strong>UIS</strong> | Profesor Cátedra (Enero 2024 - Actualidad)<br>Profesor cátedra en áreas relacionadas con los Sistemas de Información Geográfica, Teledetección y Geología Ambiental.</li>
+                <li><strong>INVEMAR</strong> | Profesional SIG (Dic 2023 - Mar 2024)</li>
+                <li><strong>UNAL</strong> | Desarrollador GIS (Oct 2023 - Mar 2024)</li>
+                <li><strong>YUMA Concesionaria</strong> | Profesional SIG (Enero 2023 - Enero 2024)</li>
+                <li><strong>INVEMAR</strong> | Investigador Científico LabSIS (Mayo 2022 - Enero 2023)</li>
+                <li><strong>YUMA Concesionaria</strong> | Profesional SIG (Mayo 2021 - Mayo 2022)</li>
+                <li><strong>UIS</strong> | Geólogo SIG (Feb 2020 - Mar 2021)</li>
+                <li><strong>K2 Ingeniería</strong> | Ingeniero Consultor SIG (Julio 2019 - Febrero 2020)</li>
+                <li><strong>IVICSA</strong> | Geólogo y Apoyo SIG (Feb 2018 - Jun 2018)</li>
+                <li><strong>INCLAM</strong> | Editor GIS (Ago 2017 - Dic 2017)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Formación Complementaria</h2>
+            <ul>
+                <li>2024 - Curso de Piloto de Drones impartido por el SENA con una duración de 240 h</li>
+                <li>2023 - 2024 - Instructor en centros de altos estudios en geomática CAEG en áreas relacionadas con manejo de sistemas de información geográfica, programación, captura de datos con dron y construcción de aplicaciones GIS</li>
+                <li>2022 - Diplomado de programación básica (MINTIC y UNAB)</li>
+                <li>2022 - Diplomado de fundamentos de programación (MINTIC y UNAB)</li>
+                <li>2020 - Mapeo de los Bosques con Datos SAR (NASA)</li>
+                <li>2020 - Curso Spatial Data Science: The new frontier in Analytics (Esri)</li>
+                <li>2020 - Manejo, uso de drones y procesamiento de imágenes</li>
+                <li>2020 - Manejo y uso de QField para adquisición de datos en campo</li>
+                <li>2019 - Curso introductorio del manejo de ArcGIS Pro (Esri)</li>
+                <li>2018 - Diseño asistido por computadora AutoCAD 2D (SENA)</li>
+                <li>2016 - Introducción a las tecnologías geoespaciales (SYNAP)</li>
+                <li>2015 - Cartografía Digital utilizando ArcGIS (ACH UIS)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Referencias</h2>
+            <ul>
+                <li>Lina Vanessa Latorre Conde - Ingeniera Topográfica (Tel: 3195651404)</li>
+                <li>Jhonatán Rivera Rivera - Geólogo (Tel: 3165564083)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Carlos Alberto Tavera Sanabria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #d1d1d1, #001f3f);
+            color: #fff;
+        }
+        header {
+            background: #001f3f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        .photo-container {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 225px;
+            height: 225px;
+            background: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2, h3 {
+            color: #001f3f;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 5px;
+        }
+        #map {
+            height: 500px; /* Altura del mapa */
+            margin: 20px auto;
+            max-width: 800px;
+            border: 2px solid #001f3f;
+            border-radius: 5px;
+        }
+    </style>
+    <!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="photo-container">
+            <img src="foto/imagen.png" alt="Foto de Perfil">
+        </div>
+        <h1>Carlos Alberto Tavera Sanabria</h1>
+        <p><b>Link de Linkedin : https://www.linkedin.com/in/carlos-alberto-tavera-sanabria-8a6b64279/ </b></p>
+    </header>
+
+   
+
+    <!-- Scripts de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+ <script>
+        // Crear el mapa y centrarlo en Colombia
+        var map = L.map('map').setView([4.5709, -74.2973], 5);
+
+        // Añadir una capa de mapa base (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Lista de sitios geológicos con descripción y enlace
+        var sitios = [
+            {
+                nombre: "Caño Cristales",
+                coord: [2.2419, -73.7841],
+                descripcion: "Conocido como el 'río de los cinco colores', es un lugar de extraordinaria belleza.",
+                url: "https://es.wikipedia.org/wiki/Ca%C3%B1o_Cristales"
+            },
+            {
+                nombre: "Cañón del Chicamocha",
+                coord: [6.7983, -73.0065],
+                descripcion: "Un impresionante cañón con vistas espectaculares y actividades turísticas.",
+                url: "https://es.wikipedia.org/wiki/Ca%C3%B1%C3%B3n_del_Chicamocha"
+            },
+            {
+                nombre: "Desierto de la Tatacoa",
+                coord: [3.2158, -75.1745],
+                descripcion: "Un desierto lleno de formaciones rocosas y colores únicos.",
+                url: "https://es.wikipedia.org/wiki/Desierto_de_la_Tatacoa"
+            },
+            {
+                nombre: "Parque Nacional Natural Los Nevados",
+                coord: [4.8686, -75.3746],
+                descripcion: "Una cadena de nevados en la región cafetera de Colombia.",
+                url: "https://es.wikipedia.org/wiki/Parque_nacional_natural_Los_Nevados"
+            },
+            {
+                nombre: "Volcán del Totumo",
+                coord: [10.4498, -75.2478],
+                descripcion: "Famoso por sus baños de lodo terapéutico.",
+                url: "https://es.wikipedia.org/wiki/Volc%C3%A1n_de_lodo_El_Totumo"
+            },
+            {
+                nombre: "Parque Nacional Natural Tayrona",
+                coord: [11.2817, -74.1874],
+                descripcion: "Un parque costero con playas y ecosistemas variados.",
+                url: "https://es.wikipedia.org/wiki/Parque_nacional_natural_Tayrona"
+            },
+            {
+                nombre: "Santuario de Fauna y Flora Iguaque",
+                coord: [5.6439, -73.4558],
+                descripcion: "Un lugar sagrado en la mitología muisca, hogar de la laguna de Iguaque.",
+                url: "https://es.wikipedia.org/wiki/Santuario_de_Flora_y_Fauna_Iguaque"
+            },
+            {
+                nombre: "Sierra Nevada del Cocuy",
+                coord: [6.4068, -72.2752],
+                descripcion: "Un imponente sistema montañoso con paisajes glaciares.",
+                url: "https://es.wikipedia.org/wiki/Parque_nacional_natural_El_Cocuy"
+            },
+            {
+                nombre: "Los Estoraques",
+                coord: [8.3372, -73.2495],
+                descripcion: "Un área de formaciones rocosas erosionadas con paisajes únicos.",
+                url: "https://es.wikipedia.org/wiki/Parque_nacional_natural_Los_Estoraques"
+            },
+            {
+                nombre: "La Mina de Sal de Nemocón",
+                coord: [5.0674, -73.8724],
+                descripcion: "Un complejo de minas de sal con historia y belleza subterránea.",
+                url: "https://es.wikipedia.org/wiki/Mina_de_sal_de_Nemoc%C3%B3n"
+            }
+        ];
+
+        // Agregar los marcadores al mapa
+        sitios.forEach(function(sitio) {
+            L.marker(sitio.coord).addTo(map)
+                .bindPopup(
+                    `<b>${sitio.nombre}</b><br>
+                    <p>${sitio.descripcion}</p>
+                    <a href="${sitio.url}" target="_blank">Ver más</a>`
+                );
+        });
+    </script>
+</body>
+</html>
